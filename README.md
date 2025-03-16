@@ -33,7 +33,7 @@ All thirdparty builds separatly to not tight your project (sdl3 and glm build in
 
 Just add them as sdl and glm added in this project, if library dont setup to be find with find_package, you can add you custom find in cmake\ as it done for gml.
 
-Also yuo can add more cmake functions here like build shaders etc. 
+Also you can add more cmake functions here like build shaders etc. 
 
 Some downside is you should be aware how you build your thirdparty, to not link you release build with debug version etc.
 
