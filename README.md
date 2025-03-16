@@ -25,12 +25,14 @@ Open VScode and setup you Cmake tools.
 
 
 
-This is slightly more elaborate template to start developing game with sdl3 on windows
+This is slightly more elaborate template to start developing game with sdl3 on windows.
+
 It has setup presets for Visual Studio compiler (note that presets also setuped in thirdparty)
 
-All thirdparty builds separatly to not tight your project (sdl3 and glm build in this template), and you can freely add more libs that also could be not even have cmake porject setuped.
+All thirdparty builds separatly to not tight your project (sdl3 and glm build in this template), and you can freely add more libs that also could be not even have cmake poroject setuped.
 
 Just add them as sdl and glm added in this project, if library dont setup to be find with find_package, you can add you custom find in cmake\ as it done for gml.
+
 Also yuo can add more cmake functions here like build shaders etc. 
 
 Some downside is you should be aware how you build your thirdparty, to not link you release build with debug version etc.
