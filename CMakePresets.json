@@ -18,7 +18,8 @@
             "cacheVariables": {
                 "CMAKE_C_COMPILER": "cl.exe",
                 "CMAKE_CXX_COMPILER": "cl.exe",
-                "CMAKE_PREFIX_PATH": "${sourceDir}/thirdparty/install/${presetName}"
+                "CMAKE_PREFIX_PATH": "${sourceDir}/thirdparty/install/${presetName}",
+                "CMAKE_WIN32_EXECUTABLE": "TRUE"
             }
         }
     ],

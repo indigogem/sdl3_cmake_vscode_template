@@ -36,20 +36,13 @@ target_include_directories(${_lib_name} PUBLIC "${_source_dir}")
 
 add_executable(standalone "${CMAKE_CURRENT_SOURCE_DIR}/src/standalone/main.cpp")
 
-# this remove console window
-if (WIN32)
-    set_target_properties(standalone PROPERTIES WIN32_EXECUTABLE TRUE)
-endif()
 
 target_link_libraries(standalone PUBLIC ${_lib_name})
 
 
 foreach( _target ${project_TARGETS} )
     target_compile_features(${_target} PRIVATE cxx_std_20)
-    #set_property(TARGET ${_target} PROPERTY 
-    #            MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 endforeach()
-
 
 # cmake --preset vs2022win64
 # cmake --build --preset debug-win-x64
