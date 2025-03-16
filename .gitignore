@@ -1,4 +1,5 @@
 build/
+data/
 thirdparty/install/
 thirdparty/build/
 tmp/
