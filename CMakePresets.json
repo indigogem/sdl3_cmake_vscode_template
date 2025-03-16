@@ -16,6 +16,9 @@
             "binaryDir": "${sourceDir}/build/${presetName}",
             "installDir": "${sourceDir}/install/${presetName}",
             "cacheVariables": {
+                "CMAKE_CXX_STANDARD": "20",
+                "CMAKE_CXX_STANDARD_REQUIRED": "TRUE",
+                "CMAKE_CXX_EXTENSIONS": "OFF",
                 "CMAKE_C_COMPILER": "cl.exe",
                 "CMAKE_CXX_COMPILER": "cl.exe",
                 "CMAKE_PREFIX_PATH": "${sourceDir}/thirdparty/install/${presetName}",

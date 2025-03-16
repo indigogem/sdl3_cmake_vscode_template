@@ -30,19 +30,18 @@ target_sources(${_lib_name}
         ${_source_dir}/base/app.cpp
     )
     
-target_link_libraries(${_lib_name} PUBLIC SDL3::SDL3-static GLM::GLM)
+target_link_libraries(${_lib_name} 
+    PUBLIC 
+        SDL3::SDL3-static   
+        GLM::GLM
+    )
 
 target_include_directories(${_lib_name} PUBLIC "${_source_dir}")
 
 add_executable(standalone "${CMAKE_CURRENT_SOURCE_DIR}/src/standalone/main.cpp")
 
-
 target_link_libraries(standalone PUBLIC ${_lib_name})
 
-
-foreach( _target ${project_TARGETS} )
-    target_compile_features(${_target} PRIVATE cxx_std_20)
-endforeach()
 
 # cmake --preset vs2022win64
 # cmake --build --preset debug-win-x64
