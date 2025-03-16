@@ -38,5 +38,6 @@ Also you can add more cmake functions here like build shaders etc.
 Some downside is you should be aware how you build your thirdparty, to not link you release build with debug version etc.
 
 Executable will be put in build/bin
-data/ will be copied in build/bin/data
+
+./data/ will be synced with ./build/bin/data (on windows using robocopy, check cmake file) (data/ ignored by git, check .gitignore)
 
