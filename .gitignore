@@ -1,5 +1,5 @@
 build/
-data/
+data/*
 thirdparty/install/
 thirdparty/build/
 tmp/
