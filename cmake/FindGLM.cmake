@@ -3,11 +3,11 @@ include(GNUInstallDirs)
 find_library(
     GLM_LIBRARY
     NAMES glm
-    HINTS ${CMAKE_PREFIX_PATH}/lib/
+    HINTS ${CMAKE_PREFIX_PATH}/glm/lib/
     )
 
 
-list(APPEND GLM_INCLUDE_DIR "${CMAKE_PREFIX_PATH}/include")
+list(APPEND GLM_INCLUDE_DIR "${CMAKE_PREFIX_PATH}/glm/include")
 
 include(FindPackageHandleStandardArgs)
 
