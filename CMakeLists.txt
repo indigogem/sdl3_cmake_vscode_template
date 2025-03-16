@@ -42,16 +42,23 @@ add_executable(standalone "${CMAKE_CURRENT_SOURCE_DIR}/src/standalone/main.cpp")
 
 target_link_libraries(standalone PUBLIC ${_lib_name})
 
-# file(COPY ${CMAKE_SOURCE_DIR}/data DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
-
 # Ensure the copy happens every build
 
-add_custom_target(copy_data
-	COMMAND ${CMAKE_COMMAND} -E copy_directory_if_different 
-        "${CMAKE_CURRENT_SOURCE_DIR}/data"
-        "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/data"
-    COMMENT "Copying data"
-)
+# add_custom_target(copy_data
+# 	COMMAND ${CMAKE_COMMAND} -E copy_directory_if_different 
+#         "${CMAKE_CURRENT_SOURCE_DIR}/data"
+#         "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/data"
+#     COMMENT "Copying data"
+# )
+
+if(WIN32)
+    add_custom_target(copy_data
+        COMMAND robocopy "${CMAKE_CURRENT_SOURCE_DIR}/data" "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/data" /MIR /NJH /NJS /NDL /NFL /NC /NS /NP || cmd /c "exit /b 0"
+        COMMENT "Copying data"
+        VERBATIM
+    )    
+endif(WIN32)
+
 add_dependencies(standalone copy_data)
 
 # cmake --preset vs2022win64
