@@ -20,12 +20,12 @@ cmake --build --preset debug-win-x64
 ```
 
 Open VScode and setup you Cmake tools.
+
 ![image](https://github.com/user-attachments/assets/9db1fcd0-52aa-410c-b285-dfcea3808677)
 
 
 
-
-This is slightly more elaborate template to start developing game with sdl3 on windows.
+This is slightly more modern template to start developing game with sdl3 on windows.
 
 It has setup presets for Visual Studio compiler (note that presets also setuped in thirdparty)
 
