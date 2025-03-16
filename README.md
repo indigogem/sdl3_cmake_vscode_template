@@ -1,7 +1,9 @@
 #### SDL3+cmake+vscode template
 
-install vscode 
+install vscode
+
 install exstansions for visual code: C/C++ Extension Pack (this includes also cmake tools)
+
 get visual studio compiler (cl.exe) (for example install Visual Studio Community 2022) (why? its native to windows, feel free setup presets for other compilers and systems)
 
 ```shell
