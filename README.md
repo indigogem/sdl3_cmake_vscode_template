@@ -4,7 +4,7 @@ install vscode
 
 install exstansions for visual code: C/C++ Extension Pack (this includes also cmake tools)
 
-get visual studio compiler (cl.exe) (for example install Visual Studio Community 2022) (why? its native to windows, feel free setup presets for other compilers and systems)
+get visual studio compiler (cl.exe) (for example install Visual Studio Community 2022) (why? its native to windows, feel free setup presets for other compilers and systems)(also you can just straight up use Visual Studio instead of vscode)
 
 ```shell
 git clone https://github.com/indigogem/sdl3_cmake_vscode_template.git
